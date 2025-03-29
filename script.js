@@ -17,7 +17,7 @@ function calculate() {
     if (currentPercent >= minPercent) {
       let maxBunks = Math.floor((attended - (minPercent / 100) * total) / (minPercent / 100));
       let days = Math.floor(maxBunks / perDay);
-      resultDiv.innerText =" Youre safe! You can bunk approximately ${maxBunks} classes (~${days} days).";
+      resultDiv.innerText =' Youre safe! You can bunk approximately ${maxBunks} classes (~${days} days).';
       animDiv.innerHTML = "😄";
       animDiv.className = "happy";
     } else {
@@ -26,7 +26,7 @@ function calculate() {
         x++;
       }
       let days = Math.ceil(x / perDay);
-      resultDiv.innerText =" You need to attend ${x} more classes (~${days} days) to reach ${minPercent}% attendance.";
+      resultDiv.innerText =' You need to attend ${x} more classes (~${days} days) to reach ${minPercent}% attendance.';
       animDiv.innerHTML = "😞";
       animDiv.className = "sad";
     }
